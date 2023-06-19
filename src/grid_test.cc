@@ -1,8 +1,8 @@
-#include "grid.h"
-
 #include <gtest/gtest.h>
 #include <cstdio>
 #include <iostream>
+
+#include "grid.h"
 
 // How to get equality?...
 TEST(GridPointConstructorTest, BasicAssertions) {
