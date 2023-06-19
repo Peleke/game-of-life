@@ -143,12 +143,12 @@ public:
   bool Survives(unsigned long i, unsigned long j) const {
     // compute next state
     unsigned long live_count = 0;
-    for (GridPoint& point : this->Neighbors(i, j)) {
-      if (this->Alive(point.x, point.y)) {
+    for (GridPoint& point : Neighbors(i, j)) {
+      if (Alive(point.x, point.y)) {
         ++live_count;
       }
     }
-    bool is_alive = this->Alive(i, j);
+    bool is_alive = Alive(i, j);
     if ((is_alive && live_count == 2) || (is_alive && live_count == 3)) {
       is_alive = 1;
     } else if (!is_alive && live_count == 3) {
