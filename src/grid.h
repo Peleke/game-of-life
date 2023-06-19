@@ -12,7 +12,7 @@ class Seeder {
   int hi;
 public:
   Seeder() : lo{0}, hi{100} { }
-  int seed() {
+  int seed() const {
     std::random_device rd;
     std::mt19937 engine(rd());
     std::uniform_int_distribution<int> dist{lo, hi};
