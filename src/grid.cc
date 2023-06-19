@@ -1,9 +1,9 @@
-#include "grid.h"
 #include <chrono>
 #include <iostream>
 #include <stdlib.h>
 #include <thread>
-using namespace std::chrono_literals;
+
+#include "grid.h"
 
 void animate(std::vector<game_of_life::Grid>& grids) {
   std::system("clear");
@@ -12,7 +12,7 @@ void animate(std::vector<game_of_life::Grid>& grids) {
   for (int i = 1; i < grids.size(); ++i) {
     grids[i] = grids[i-1].Evolve();
 
-    std::this_thread::sleep_for(0.5s);
+    std::this_thread::sleep_for(std::chrono::seconds(30));
     std::system("clear");
 
     grids[i].Render();
