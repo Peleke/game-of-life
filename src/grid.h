@@ -26,8 +26,11 @@ class Grid {
   Seeder s;
   std::vector<std::vector<unsigned long>> rows;
 public:
-  Grid() : nrows{10}, ncolumns{10}, rows{std::vector<std::vector<unsigned long>>(nrows, std::vector<unsigned long>(ncolumns, 0))} { }
-  Grid(const unsigned long rows, const unsigned long columns) : nrows{rows}, ncolumns{columns}, rows{std::vector<std::vector<unsigned long>>(nrows, std::vector<unsigned long>(ncolumns, 0))} { }
+  Grid() : nrows{10}, ncolumns{10},
+           rows{std::vector<std::vector<unsigned long>>(nrows, std::vector<unsigned long>(ncolumns, 0))} { }
+  Grid(const unsigned long rows, const unsigned long columns) 
+    : nrows{rows}, ncolumns{columns},
+      rows{std::vector<std::vector<unsigned long>>(nrows, std::vector<unsigned long>(ncolumns, 0))} { }
   Grid(std::vector<std::vector<unsigned long>> rows) : nrows{rows.size()}, ncolumns{rows[0].size()}, rows{rows}  { }
 
   struct GridPoint {
