@@ -21,8 +21,8 @@ void animate(std::vector<game_of_life::Grid>& grids) {
 
 int main() {
   std::vector<game_of_life::Grid> grids(100);
-  
-  game_of_life::Grid grid{78, 78};
+
+  game_of_life::Grid grid{49, 45};
   grid.Seed();
   grids[0] = grid;
 

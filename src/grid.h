@@ -62,7 +62,7 @@ public:
       }
     }
   }
-  void Seed(int live_percentage = 10) {
+  void Seed(int live_percentage = 25) {
     for (int i = 0; i < nrows; ++i) {
       for (int j = 0; j < ncolumns; ++j) {
         if (s.seed() < live_percentage) {
@@ -156,5 +156,5 @@ public:
     return is_alive;
   }
 };
-} // namespace game_of_life
+}; // namespace game_of_life
 #endif // GOL_GRID_H_
